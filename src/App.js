@@ -7,6 +7,7 @@ class App extends Component {
 		todos: [{ id: 1, content: "buy some food" }, { id: 2, content: "Do work" }]
 	};
 
+	// id passed from Todos.js to remove todo and store new state
 	deleteTodo = id => {
 		const todos = this.state.todos.filter(todo => {
 			return todo.id !== id;
@@ -15,6 +16,7 @@ class App extends Component {
 		this.setState({ todos });
 	};
 
+	// todo passed from AddTodo.js, assigns it a unique id, and adds it // to the todos array and sets it in state
 	addTodo = todo => {
 		todo.id = Math.random();
 		const todos = [...this.state.todos, todo];

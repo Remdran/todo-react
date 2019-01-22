@@ -1,6 +1,8 @@
 import React from "react";
 
 const Todos = ({ todos, deleteTodo }) => {
+	// If the todoList has something in it, map over and render them
+	// if not render the p tag
 	const todoList = todos.length ? (
 		todos.map(todo => {
 			return (
